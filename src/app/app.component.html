@@ -1,3 +1,17 @@
 <h1>Hello world!</h1>
-
  <app-hello-world></app-hello-world>
+<!--  <button routerLink="/upload">Upload File Here</button>
+ <router-outlet></router-outlet> -->
+
+ <div>
+    <div class="upload-btn">  
+    <!--                     <mat-progress-bar [value]="file.progress"></mat-progress-bar>   -->
+        <span *ngFor="let file of files" id="file-label" style="color: white">
+            FILE UPLOADED  
+        </span>  
+        <button (click)="onClick()">  
+            Select A File  
+        </button>  
+    </div>
+    <input type="file" #fileUpload id="fileUpload" name="fileUpload" multiple="multiple" accept="file_extension" style="display:none;" />
+</div>
